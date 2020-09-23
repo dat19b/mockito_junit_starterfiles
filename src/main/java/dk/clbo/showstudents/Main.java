@@ -10,6 +10,10 @@ public class Main {
         IStudentRepository studentsRepository = new StudentConsoleRepository();
         ShowStudents showStudents = new ShowStudents(studentsRepository); // dependency inject studentsRepository
         System.out.println(showStudents.showAll());
+
+        // Bruges til øvelse
+        // System.out.println(showStudents.createStudent(new Student(10,"Esther", "Fallon", "223344")));
+        // System.out.println(showStudents.showAll());
     }
 
 }

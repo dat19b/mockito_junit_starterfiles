@@ -16,4 +16,15 @@ public class ShowStudents {
     public List<Student> showAll(){
         return studentRepository.readAll();
     }
+
+    /*
+    public boolean createStudent(Student st){
+        boolean isCreated  = studentRepository.create(st);
+        if(isCreated){
+            return true;
+        }
+        return false;
+    }
+    
+     */
 }

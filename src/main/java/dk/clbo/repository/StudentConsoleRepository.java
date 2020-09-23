@@ -46,10 +46,11 @@ public class StudentConsoleRepository implements IStudentRepository {
     public boolean create(Student student) {
         try {
 
-            preparedStatement = conn.prepareStatement("insert into students(first_name,last_name, cpr)" +
-                    "values('" + student.getFirstName() + "','" + student.getLastName() + "', '" +
-                    "', '" + student.getCpr() + "')");
+            preparedStatement = conn.prepareStatement("INSERT INTO students(first_name, last_name, cpr)  VALUES (?,?,?)");
 
+            preparedStatement.setString(1, student.getFirstName());
+            preparedStatement.setString(2, student.getLastName());
+            preparedStatement.setString(3, student.getCpr());
 
             preparedStatement.execute();
             return true;
