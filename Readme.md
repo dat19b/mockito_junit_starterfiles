@@ -8,10 +8,10 @@ Clone this project:
 
 
 ````
-    $ git clone 
+    $ git clone https://github.com/dat19b/mockito_junit_starterfiles.git
 ````
 
-And open it in IntelliJ
+and open it in IntelliJ
 
 ### Database
 Create or open a connection to your DB Server.    
