@@ -1,6 +1,7 @@
 # Demo Project for Unittesting with JUnit5 and Mockito
 This project is for demos at the blackboard during teachings. You should follow along while we do live coding. Afterwards you will do some exercises connected to this project.
 
+> You can see the solutions and examples from teaching in the solutions branch of this repository
 
 ## Setup
 
