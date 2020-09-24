@@ -8,8 +8,8 @@ import java.util.List;
 public class StudentsMockRepository implements IStudentRepository {
     @Override
     public List<Student> readAll() {
-        List<Student> students = new ArrayList<>();
-        students.add(new Student());
-        return students;
+        //List<Student> students = new ArrayList<>();
+        //students.add(new Student());
+        return null; //students;
     }
 }

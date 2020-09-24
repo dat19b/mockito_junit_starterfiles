@@ -41,7 +41,7 @@ public class StudentConsoleRepository implements IStudentRepository {
 
         return students;
     }
-/*
+
     @Override
     public boolean create(Student student) {
         try {
@@ -60,7 +60,5 @@ public class StudentConsoleRepository implements IStudentRepository {
             return false;
         }
     }
-
- */
 }
 

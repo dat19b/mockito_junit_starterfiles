@@ -8,7 +8,7 @@ public interface IStudentRepository {
 
     // Crud methods
 
-    //boolean create(Student t);
+    boolean create(Student t);
     //Student read(int id);
     List<Student> readAll();
     //boolean update(Student t);
