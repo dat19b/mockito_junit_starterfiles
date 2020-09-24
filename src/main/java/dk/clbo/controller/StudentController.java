@@ -2,6 +2,7 @@ package dk.clbo.controller;
 
 import dk.clbo.model.Student;
 import dk.clbo.repository.IStudentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

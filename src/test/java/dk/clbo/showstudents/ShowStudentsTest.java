@@ -38,5 +38,13 @@ class ShowStudentsTest {
 
     @Test
     void createStudent() {
+        Student stud = new Student(1,"e", "f", "12");
+        Student empty = new Student();
+
+        when(studentRepository.create(stud)).thenReturn(true);
+        assertEquals(true, showStudents.createStudent(stud));
+        assertEquals(false, showStudents.createStudent(empty));
+
+        verify(studentRepository, times(1)).create(stud);
     }
 }

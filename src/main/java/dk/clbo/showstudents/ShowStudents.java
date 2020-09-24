@@ -25,11 +25,12 @@ public class ShowStudents {
 
 
     public boolean createStudent(Student st){
-        boolean isCreated  = studentRepository.create(st);
-        if(isCreated){
+        return studentRepository.create(st);
+
+        /*if(isCreated){
             return true;
         }
-        return false;
+        return false;*/
     }
 
 
