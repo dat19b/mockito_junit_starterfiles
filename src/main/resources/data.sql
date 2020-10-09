@@ -1,0 +1,1 @@
+INSERT INTO `student`VALUES (1,'Claus','Bove','21212121'),(2,'Hanne','Boesen','323232'),(3,'Stephen','James','SE21 8HZ'),(5,'Cay','Larsen','21332244-7777'),(6,'Jon','Eikholm','24342424-4444'),(7,'Johanne','Vestergård','4920'),(8,'Johanne rrr','Vestergård rrr','49204343-2'),(9,'Svend','Guttormsen','32323232-22');

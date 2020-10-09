@@ -2,12 +2,18 @@ package dk.clbo.model;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity // (name = "students")
+// @Table(name = "students") // kan også gøre sådan
 public class Student {
 
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int studentId;
+
     private String firstName;
     private String lastName;
     private String cpr;

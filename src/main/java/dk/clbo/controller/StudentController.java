@@ -2,6 +2,7 @@ package dk.clbo.controller;
 
 import dk.clbo.model.Student;
 import dk.clbo.repository.IStudentRepository;
+import dk.clbo.repository.StudentsJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,15 +11,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class StudentController  {
 
-    IStudentRepository studentRepository;
+    //IStudentRepository studentRepository;
+    StudentsJPARepository studentRepository;
 
-    public StudentController(IStudentRepository studentRepository) {
+    public StudentController(StudentsJPARepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("std", studentRepository.readAll());
+        model.addAttribute("std", studentRepository.findAll());
         return "index";
     }
 

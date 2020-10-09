@@ -2,6 +2,7 @@ package dk.clbo.controller;
 
 import dk.clbo.model.Student;
 import dk.clbo.repository.IStudentRepository;
+import dk.clbo.repository.StudentsJPARepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -19,7 +20,7 @@ class StudentControllerTest {
     StudentController studentController;
 
     @Mock
-    IStudentRepository studentRepository;
+    StudentsJPARepository studentRepository;
     @Mock
     Model model;
 
@@ -32,8 +33,8 @@ class StudentControllerTest {
     @Test
     void index() {
         assertEquals("index", studentController.index(model));
-        verify(studentRepository, times(1)).readAll();
+        verify(studentRepository, times(1)).findAll();
         //when(studentRepository.readAll()).thenReturn(new ArrayList<>(Arrays.asList(new Student())));
-        verify(model, times(1)).addAttribute("std",studentRepository.readAll());
+        verify(model, times(1)).addAttribute("std",studentRepository.findAll());
     }
 }
