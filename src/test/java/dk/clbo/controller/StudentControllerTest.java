@@ -37,4 +37,14 @@ class StudentControllerTest {
         //when(studentRepository.readAll()).thenReturn(new ArrayList<>(Arrays.asList(new Student())));
         verify(model, times(1)).addAttribute("std",studentRepository.findAll());
     }
+
+    @Test
+    void create() {
+        assertEquals("create", studentController.create(model));
+        verify(model, times(1)).addAttribute("student", new Student());
+    }
+
+    @Test
+    void testCreate() {
+    }
 }

@@ -1,12 +1,13 @@
 package dk.clbo.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.util.Date;
 
-@Entity // (name = "students")
-// @Table(name = "students") // kan også gøre sådan
+//@Entity
+@Document
 public class Student {
 
 
